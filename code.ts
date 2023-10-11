@@ -21,15 +21,17 @@ figmaUIApi.onmessage = async (msg) => {
             const centerY = figma.viewport.center.y;
             const segments = msg.segments;
             const rotationAngle = msg.rotation / segments; // Calculate rotation angle based on segments and total rotation
+            const initialRotation = msg.initialRotation || 0; // Default to 0 if not provided
 
             for (let i = 0; i < segments; i++) {
-                const clone = selection.clone();
-                const symmetryPoints = getSymmetryPointsWithRadius(selection.x, selection.y, rotationAngle * i, centerX, centerY, msg.radius || 100);
-                clone.x = symmetryPoints[0];
-                clone.y = symmetryPoints[1];
-                nodes.push(clone);
-                figma.currentPage.appendChild(clone);
-            }
+              const clone = selection.clone() as FrameNode | RectangleNode | EllipseNode | PolygonNode | StarNode | VectorNode | BooleanOperationNode;
+              const symmetryPoints = getSymmetryPointsWithRadius(0, 0, rotationAngle * i, centerX - selection.x, centerY - selection.y, msg.radius || 100);
+              clone.x += symmetryPoints[0]; // Adjust the x position relative to the original selection
+              clone.y += symmetryPoints[1]; // Adjust the y position relative to the original selection
+              clone.rotation = initialRotation;
+              nodes.push(clone);
+              figma.currentPage.appendChild(clone);
+          }
 
             figma.currentPage.selection = nodes;
             figma.viewport.scrollAndZoomIntoView(nodes);

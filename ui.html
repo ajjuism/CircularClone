@@ -64,13 +64,18 @@
     <input type="number" id="rotation" min="1" value="360">
     <br>
     
+    <label for="initialRotation">Initial Rotation (degrees):</label>
+    <input type="number" id="initialRotation" value="0">
+    <br>
+    
     <button onclick="createPattern()">Create Pattern</button>
     
     <script>
-        function createPattern() {
-            const segments = parseInt(document.getElementById('segments').value, 10);
-            const radius = parseInt(document.getElementById('radius').value, 10);
-            const rotation = parseInt(document.getElementById('rotation').value, 10);
-            parent.postMessage({ pluginMessage: { type: 'create-pattern', segments, radius, rotation } }, '*');
-        }
-    </script>
+      function createPattern() {
+          const segments = parseInt(document.getElementById('segments').value, 10);
+          const radius = parseInt(document.getElementById('radius').value, 10);
+          const rotation = parseInt(document.getElementById('rotation').value, 10);
+          const initialRotation = parseInt(document.getElementById('initialRotation').value, 10);
+          parent.postMessage({ pluginMessage: { type: 'create-pattern', segments, radius, rotation, initialRotation } }, '*');
+      }
+  </script>

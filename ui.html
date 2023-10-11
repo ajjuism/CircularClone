@@ -25,6 +25,7 @@
             text-align: center;
             font-size: 24px;
             font-weight: 500;
+            margin-bottom: 20px;
         }
 
         h2::before {
@@ -36,6 +37,7 @@
             align-items: center;
             margin-bottom: 8px;
             margin-top: 20px;
+            font-size: 15px;
         }
 
         .description {
@@ -64,7 +66,7 @@
         }
 
         button {
-            background-color: #487ab2;
+            background-color: #2068ba;
             color: #e0e0e0;
             border: none;
             padding: 10px 20px;
@@ -88,28 +90,28 @@
   </h2>
 
   <label for="segments">
-      <img src="data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12H17.625M12 21C7.02944 21 3 16.9706 3 12M12 21V17.625M3 12C3 7.02944 7.02944 3 12 3M3 12H6.375M12 3V6.375' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>" alt="Segments Icon"> 
+      <img src="data:image/svg+xml;utf8,<svg width='28' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12H17.625M12 21C7.02944 21 3 16.9706 3 12M12 21V17.625M3 12C3 7.02944 7.02944 3 12 3M3 12H6.375M12 3V6.375' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>" alt="Segments Icon"> 
       Number of Segments:
   </label>
   <input type="number" id="segments" min="1" value="8" placeholder="Enter number of segments">
   <p class="description">Specify how many clones you want arranged within the circular formation.</p>
 
   <label for="radius">
-      <img src="data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M21.2 11.6C21.2 16.9019 16.9019 21.2 11.6 21.2C6.29807 21.2 2 16.9019 2 11.6C2 6.29807 6.29807 2 11.6 2C16.9019 2 21.2 6.29807 21.2 11.6Z' stroke='white' stroke-width='2'/></svg>" alt="Radius Icon"> 
+      <img src="data:image/svg+xml;utf8,<svg width='28' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M21.2 11.6C21.2 16.9019 16.9019 21.2 11.6 21.2C6.29807 21.2 2 16.9019 2 11.6C2 6.29807 6.29807 2 11.6 2C16.9019 2 21.2 6.29807 21.2 11.6Z' stroke='white' stroke-width='2'/></svg>" alt="Radius Icon"> 
       Radius:
   </label>
-  <input type="number" id="radius" min="1" value="100" placeholder="Enter radius">
+  <input type="number" id="radius" min="1" value="500" placeholder="Enter radius">
   <p class="description">Adjust the radius of the resulting circular pattern.</p>
 
   <label for="rotation">
-      <img src="data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M3.5835 21.6L10.9479 8.71235M13.578 8.71235L20.4164 21.6M4.36278 14.7617C6.29076 17.6643 9.11555 19.4959 12.2632 19.4959C15.4108 19.4959 18.2356 17.6643 20.1636 14.7617M12.2629 3.71509C10.8104 3.71509 9.63281 4.89264 9.63281 6.34523C9.63281 7.79781 10.8104 8.97537 12.2629 8.97537C13.7155 8.97537 14.8931 7.79781 14.8931 6.34523C14.8931 4.89264 13.7155 3.71509 12.2629 3.71509ZM12.2629 3.71509V2.40002' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" alt="Rotation Angle Icon">
+      <img src="data:image/svg+xml;utf8,<svg width='28' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M3.5835 21.6L10.9479 8.71235M13.578 8.71235L20.4164 21.6M4.36278 14.7617C6.29076 17.6643 9.11555 19.4959 12.2632 19.4959C15.4108 19.4959 18.2356 17.6643 20.1636 14.7617M12.2629 3.71509C10.8104 3.71509 9.63281 4.89264 9.63281 6.34523C9.63281 7.79781 10.8104 8.97537 12.2629 8.97537C13.7155 8.97537 14.8931 7.79781 14.8931 6.34523C14.8931 4.89264 13.7155 3.71509 12.2629 3.71509ZM12.2629 3.71509V2.40002' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" alt="Rotation Angle Icon">
       Rotation Angle (degrees):
   </label>
   <input type="number" id="rotation" min="1" value="360" placeholder="Enter rotation angle">
   <p class="description">Use 360 for a complete circle or 180 for a half-circle configuration.</p>
 
   <label for="initialRotation">
-      <img src="data:image/svg+xml;utf8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M9.99033 6.48143C6.93217 7.85443 4.97097 11.0122 5.36014 14.4279C5.84515 18.6848 9.79702 21.7302 14.1869 21.23C18.5768 20.7299 21.7423 16.8735 21.2573 12.6167C20.9322 9.76374 19.05 7.45495 16.5223 6.39294M15.7955 8.84712L15.3564 4.99326L19.3306 4.54045' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" alt="Initial Rotation Icon">
+      <img src="data:image/svg+xml;utf8,<svg width='28' height='24' xmlns='http://www.w3.org/2000/svg'><path d='M9.99033 6.48143C6.93217 7.85443 4.97097 11.0122 5.36014 14.4279C5.84515 18.6848 9.79702 21.7302 14.1869 21.23C18.5768 20.7299 21.7423 16.8735 21.2573 12.6167C20.9322 9.76374 19.05 7.45495 16.5223 6.39294M15.7955 8.84712L15.3564 4.99326L19.3306 4.54045' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>" alt="Initial Rotation Icon">
       Initial Rotation (degrees):
   </label>
   <input type="number" id="initialRotation" value="0" placeholder="Enter initial rotation">
